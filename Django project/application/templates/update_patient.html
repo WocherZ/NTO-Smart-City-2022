@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Изменение данных пациента</title>
+{% endblock %}
+
+{% block files %}
+{% endblock %}
+
+{% block content %}
+<div class="main__area">
+    <div class="signin_area">
+        <div class="signin_area_2"class="signin_area_2">
+            <p><font size="15" color=white face="consolas">Данные пациента</font></p>
+            <form method="post">
+                <p><label>Вес:<br>{{ form.weight }}</label></p>
+                <p><label>Рост:<br>{{ form.height }}</label></p>
+                <p><label>Дигноз:<br>{{ form.diagnosis }}</label></p>
+                <p><label>Комната:<br>{{ form.room }}</label></p>
+                <p><label>Лечащий врач:<br>{{ form.doctor }}</label></p>
+                <button class="button-9" type="submit">Изменить</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Врач {{id}}</title>
+{% endblock %}
+
+{% block files %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="main__area">
+        <div class="room">
+            <p><font size="15" color=white face="consolas">Доктор</font></p>
+            <div class="lk__option">{{ last_name }} {{ first_name }}</div>
+            <div class="lk__option">Пол: {{ gender }}</div>
+            <div class="lk__option">Возраст: {{ age }}</div>
+            <div class="lk__option">Должность: {{ profession }}</div>
+            <div class="lk__option">Почта: {{ email }}</div>
+        </div>
+    </div>
+{% endblock %}

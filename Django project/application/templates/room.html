@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Комната {{id}}</title>
+{% endblock %}
+
+{% block files %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="main__area">
+        <div class="room">
+            <p><font size="15" color=white face="consolas">Комната {{ id }}</font></p>
+            <div class="lk__option">Температура: {{ temperature }}℃</div>
+            <div class="lk__option">Освещенность: {{ illumination }}</div>
+            <div class="lk__option">Вентилятор: {{ fan }}</div>
+            <div class="lk__option">Нагреватель: {{ heater }}</div>
+            <div class="lk__option">Влажность: {{ humidity }}%</div>
+            <div class="lk__option">Открытие двери: {{ door }}</div>
+            <div class="lk__option">Открытие окна: {{ window }}</div>
+            <div class="lk__option">Присутсвие в комнате: {{ is_present }}</div>
+            <div class="lk__option"><a href={{link_update}}>Редактировать данные комнаты</a></div>
+        </div>
+    </div>
+{% endblock %}

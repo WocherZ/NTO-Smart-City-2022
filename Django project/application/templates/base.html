@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Title</title>
+    {% endblock %}
+
+    <link type="text/css" href="{% static 'css/base.css' %}" rel="stylesheet"/>
+    {% block files %}
+    {% endblock %}
+</head>
+<body>
+
+    <header>
+        <div class="header__logo">
+            <a href="{% url 'home' %}"><img src="{% static 'img/axiom_logo.jpg' %}" height="150" alt="Axiom"></a>
+        </div>
+        <div class="headerr__optionsbar">
+            {% if role == None %}
+                <div class="headerr__button">
+                    <a href="{% url 'login' %}">Войти</a>
+                </div>
+                <div class="headerr__button">
+                    <a href="{% url 'registration' %}">Регистрация</a>
+                </div>
+            {% endif %}
+
+            {% if role %}
+                <div class="headerr__button">
+                    <a href="{% url 'profile' %}">Личный кабинет {{ role }}а</a>
+                </div>
+                <div class="headerr__button">
+                    <a href="{% url 'logout' %}">Выйти</a>
+                </div>
+            {% endif %}
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <p>Этот проект был сделан на финале студтрека олимпиады "НТО" по профилю "Умный Город" командой AXIOM<br>Состав команды: Дановский Илья, Янгалин Герман, Павел Двинских, Андрей Миронов, Владимир Зворыгин</p>
+    </footer>
+</body>
+</html>

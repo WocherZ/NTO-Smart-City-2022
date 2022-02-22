@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Создание анализа</title>
+{% endblock %}
+
+{% block files %}
+
+{% endblock %}
+
+{% block content %}
+<div class="main__area">
+    <div class="signin_area">
+        <div class="signin_area_2">
+            <p><font size="15" color=white face="consolas">Создание анализа</font></p>
+            <form method="post">
+                <p><label>Пациент:<br>{{ form.patient }}</label></p>
+                <p><label>Название анализа:<br>{{ form.name }}</label></p>
+                <p><label>Результат анализа:<br>{{ form.value }}</label></p>
+                {% if error %}
+                    <span>{{ error }}</span><br>
+                {% endif %}
+                <button class="button-9" type="submit">Создать анализ</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

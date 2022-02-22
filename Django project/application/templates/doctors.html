@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Список врачей</title>
+{% endblock %}
+
+{% block files %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="main__area">
+        <div class="room">
+            <p><font size="15" color=white face="consolas">Список докторов</font></p>
+            <ul>
+                {% for doctor in doctors %}
+                    <li><a href="{% url 'doctor' doctor.id %}">{{ doctor.last_name }} {{ doctor.first_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

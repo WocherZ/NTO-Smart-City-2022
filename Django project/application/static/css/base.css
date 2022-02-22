@@ -1,0 +1,188 @@
+body {
+    background: url("../img/background3.jpg");
+}
+
+ul {
+    font-family: sans-serif;
+    color: white;
+    line-height: 30px;
+}
+
+a, a.visited {
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+
+
+header {
+/*    width: 90%;*/
+    background: #1d1d1d;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px #000;
+
+    display: flex;
+    justify-content:flex-start;
+    margin-bottom: 30px;
+}
+
+footer {
+    background: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px #000;
+    padding: 20px;
+    color: #525252;
+    font-family: sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+
+.header__logo {
+    box-sizing: border-box;
+    margin: auto 10px;
+    left: 0px;
+    width: 20%;
+}
+
+.headerr__optionsbar {
+    font-size: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    width: 75%;
+}
+
+.headerr__button {
+    box-sizing: content-box;
+    margin: auto 15px;
+
+}
+
+.main__area {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+/*##################### Это для ЛК*/
+.lk_options_area {
+    width: 20%;
+    background: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px #000;
+    padding: 25px;
+/*    margin-right: 10px; */
+}
+
+.lk__information__area {
+    width: 70%;
+    background: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px #000;
+
+    padding: 25px;
+/*    margin-left: 10px;*/
+}
+
+.lk__option {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: white;
+    box-sizing: border-box;
+    margin: 20px 5px;
+    font-family: sans-serif;
+}
+/*##########################################*/
+
+/*##################### Это для страницы комната*/
+.room {
+    width: 100%;
+    background: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px #000;
+    padding: 25px;
+/*    margin-right: 10px; */
+}
+/*##########################################*/
+
+/*##################### Это для главной страницы*/
+.main_page_column {
+    width: 20%;
+/*
+    background: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px #000;
+*/
+/*    margin-right: 10px; */
+}
+
+.main_page {
+    background: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px #000;
+    padding: 25px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+/*##########################################*/
+
+/*##################### Это для страницы входа*/
+.signin_area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.signin_area_2 {
+    background: #1d1d1d;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px #000;
+    padding: 25px;
+}
+/*##########################################*/
+
+.button-9 {
+    appearance: button;
+    backface-visibility: hidden;
+    background-color: #405cf5;
+    border-radius: 5px;
+    border-width: 0;
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+    font-size: 18px;
+    height: 36px;
+    line-height: 1.15;
+    margin: 12px 0 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    transform: translateZ(0);
+    transition: all .2s,box-shadow .08s ease-in;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+}
+
+.button-9:disabled {
+    cursor: default;
+}
+
+.button-9:focus {
+    box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}

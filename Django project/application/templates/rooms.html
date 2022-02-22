@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Список комнат</title>
+{% endblock %}
+
+{% block files %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="main__area">
+        <div class="room">
+            <p><font size="15" color=white face="consolas">Список комнат</font></p>
+            <ul>
+                {% for room in rooms %}
+                    <li><a href="{% url 'room' room.id%}">Комната {{ room.id }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Создание нового пациента</title>
+{% endblock %}
+
+{% block files %}
+{% endblock %}
+
+{% block content %}
+<div class="main__area">
+    <div class="signin_area">
+        <div class="signin_area_2">
+            <p><font size="15" color=white face="consolas">Создание пациента</font></p>
+            <form method="post">
+                <p><label>Логин пациента:<br>{{ form.login }}</label></p>
+                <p><label>Пароль пациента:<br>{{ form.password }}</label></p>
+                <p><label>Имя пациента:<br>{{ form.first_name }}</label></p>
+                <p><label>Фамилия пациента:<br>{{ form.last_name }}</label></p>
+                <p><label>Пол пациента:<br>{{ form.gender }}</label></p>
+                <p><label>Возраст:<br>{{ form.age }}</label></p>
+                <p><label>Вес:<br>{{ form.weight }}</label></p>
+                <p><label>Рост:<br>{{ form.height }}</label></p>
+                <p><label>Дигноз:<br>{{ form.diagnosis }}</label></p>
+                <p><label>Комната:<br>{{ form.room }}</label></p>
+                <p><label>Лечащий врач:<br>{{ form.doctor }}</label></p>
+                {% if error %}
+                    <span>{{ error }}</span><br>
+                {% endif %}
+                <button class="button-9" type="submit">Создать пациента</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

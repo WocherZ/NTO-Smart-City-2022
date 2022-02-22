@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Изменение данных комнаты</title>
+{% endblock %}
+
+{% block files %}
+{% endblock %}
+
+{% block content %}
+<div class="main__area">
+    <div class="signin_area">
+        <div class="signin_area_2">
+            <p><font size="15" color=white face="consolas">Изменение данных комнаты</font></p>
+            <form method="post">
+                <p><label>Температура:<br>{{ form.temperature }}</label></p>
+                <p><label>Освещённость:<br>{{ form.illumination }}</label></p>
+                <p><label>Вентилятор:<br>{{ form.fan }}</label></p>
+                <p><label>Нагреватель:<br>{{ form.heater }}</label></p>
+                <p><label>Влажность:<br>{{ form.humidity }}</label></p>
+                <p><label>Дверь:<br>{{ form.door }}</label></p>
+                <p><label>Окно:<br>{{ form.window }}</label></p>
+                <p><label>Присутствие в комнате:<br>{{ form.is_present }}</label></p>
+                <button class="button-9" type="submit">Изменить</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Личный кабинет</title>
+{% endblock %}
+
+{% block files %}
+{% endblock %}
+
+{% block content %}
+    {% if role == "Пациент" %}
+        <div class="main__area">
+            <div class="lk_options_area">
+                <div class="lk__option"><a href="{% url 'doctors' %}">Список докторов</a></div>
+            </div>
+
+            <div class="lk__information__area">
+                <p><font size="15" color=white face="consolas">Личный кабинет пациента</font></p>
+                <div class="lk__option">Имя: {{ first_name }}</div>
+                <div class="lk__option">Фамилия: {{ last_name }}</div>
+                <div class="lk__option">Диагноз: {{ diagnosis }}</div>
+                <div class="lk__option">Лечащий врач: <a href="{% url 'doctor' doctor_id %}">{{ doctor }}</a></div>
+                <div class="lk__option">Список анализов:</div>
+                {% for analysis in analyzes %}
+                    <div class="lk__option">{{ analysis.name }}: {{ analysis.value }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+    {% if role == "Врач" %}
+        <div class="main__area">
+            <div class="lk_options_area">
+                <div class="lk__option"><a href="{% url 'patients' %}">Список пациентов</a></div>
+                <div class="lk__option"><a href="{% url 'doctors' %}">Список докторов</a></div>
+                <div class="lk__option"><a href="{% url 'rooms' %}">Список комнат</a></div>
+                <div class="lk__option"><a href="{% url 'create_patient' %}">Добавить нового пациента</a></div>
+                <div class="lk__option"><a href="{% url 'create_analysis' %}">Добавить новый анализ</a></div>
+            </div>
+
+            <div class="lk__information__area">
+                <p><font size="15" color=white face="consolas">Личный кабинет врача</font></p>
+                <div class="lk__option">Имя: {{ first_name }}</div>
+                <div class="lk__option">Фамилия: {{ last_name }}</div>
+                <div class="lk__option">Должность: {{ profession }}</div>
+                <div class="lk__option">Список пациентов:</div>
+                {% for patient in patients %}
+                    <div class="lk__option"><a href="{% url 'patient' patient.patient_id %}">{{ patient.last_name }} {{ patient.first_name }}</a></div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

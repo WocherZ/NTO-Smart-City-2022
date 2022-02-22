@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Главная страница</title>
+{% endblock %}
+
+{% block files %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="main__area">
+        <div class="main_page_column">
+            <div class="main_page"><img src="{% static 'img/nto_logo.jpg' %}" width="250" alt="nto_logo"></div>
+
+            <div class="main_page"><img src="{% static 'img/some_information.jpg' %}" width="250" alt="some_information"></div>
+        </div>
+
+        <div class="main_page_column">
+            <div class="main_page"><img src="{% static 'img/ug_logo.jpg' %}" width="250" alt="ug_logo"></div>
+
+            <div class="main_page"><img src="{% static 'img/some_information.jpg' %}" width="250" alt="some_information"></div>
+        </div>
+
+        <div class="main_page_column">
+            <div class="main_page"><img src="{% static 'img/tpu_logo.jpg' %}" width="250" alt="tpu_logo"></div>
+
+            <div class="main_page"><img src="{% static 'img/some_information.jpg' %}" width="250" alt="some_information"></div>
+        </div>
+
+        <div class="main_page_column">
+            <div class="main_page"><img src="{% static 'img/some_information.jpg' %}" width="250" alt="some_information"></div>
+
+            <div class="main_page"><img src="{% static 'img/some_information.jpg' %}" width="250" alt="some_information"></div>
+        </div>
+    </div>
+{% endblock %}

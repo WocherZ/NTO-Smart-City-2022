@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Пациент {{id}}</title>
+{% endblock %}
+
+{% block files %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="main__area">
+            <div class="room">
+                <p><font size="15" color=white face="consolas">Пациент</font></p>
+                 <div class="lk__option">{{ last_name }} {{ first_name }}</div>
+                 <div class="lk__option">Пол: {{ gender }}</div>
+                 <div class="lk__option">Возраст: {{ age }}</div>
+                 <div class="lk__option">Вес: {{ weight }} кг</div>
+                 <div class="lk__option">Рост: {{ height }} cм</div>
+                 <div class="lk__option">Диагноз: {{ diagnosis}}</div>
+                 <div class="lk__option"><a href={{link_update}}>Редактировать данные пациента</a></div>
+            </div>
+        </div>
+{% endblock %}

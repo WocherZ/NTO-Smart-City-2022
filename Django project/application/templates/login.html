@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>Вход</title>
+{% endblock %}
+
+{% block files %}
+
+{% endblock %}
+
+{% block content %}
+    <div class="main__area">
+        <div class="signin_area">
+            <div class="signin_area_2">
+                <form action="" method="post">
+                    <p>
+                        <label>Логин:<br>
+                        {{ form.login }}<br>
+                        </label>
+                    </p>
+                    <p>
+                        <label>Пароль:<br>
+                        {{ form.password }}<br>
+                        </label>
+                    </p>
+                    <br>
+                    <button class="button-9" type="submit">Войти</button>
+                </form>
+                {{ error }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
